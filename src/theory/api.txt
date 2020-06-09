@@ -1,0 +1,4 @@
+untk bisa terkoneksi ke localhost milik laptop, maka running perintah dibawah ini
+$ adb reverse tcp:[port] tcp:[port]
+
+*port yang tertera dalam api, ex: 2020
