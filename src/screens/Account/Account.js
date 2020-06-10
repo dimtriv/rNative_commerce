@@ -2,7 +2,7 @@ import React, {useState,  useCallback} from 'react'
 import { View, Image } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage'
 import {useDispatch, useSelector} from 'react-redux'
-import {Button, Text, Spinner} from 'native-base'
+import {Button, Text} from 'native-base'
 import axios from '../../config/api'
 import { useFocusEffect } from '@react-navigation/native'
 import Loading from '../Loading/Loading'
@@ -10,6 +10,7 @@ import Loading from '../Loading/Loading'
 
 const Account = () => {
 
+    const dispatch = useDispatch()
     const username = useSelector(state => state.auth.username)
     const [image, setImage] = useState('')
     // console.log(image)
@@ -27,11 +28,11 @@ const Account = () => {
         useCallback(() => {
             
             axios.get(`/user/avatar/${username}`)
+            // data ada ditempat yg berbeda dengan d web
             .then(res => setImage(res.request.responseURL)) 
             .catch(err => console.log(err))
         }, [])
     )
-    console.log(image)
 
     return image ?  
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
