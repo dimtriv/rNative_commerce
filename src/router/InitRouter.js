@@ -7,6 +7,7 @@ import AuthRouter from './AuthRouter'
 import MainRouter from './MainRouter'
 import AsyncStorage from '@react-native-community/async-storage'
 import { Spinner } from 'native-base'
+import Loading from '../screens/Loading/Loading'
 
 export default function index() {
 
@@ -29,9 +30,7 @@ export default function index() {
 
     if(loading) {
         return(
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Spinner color='purple' />
-            </View>
+            <Loading />
             
         )
     }

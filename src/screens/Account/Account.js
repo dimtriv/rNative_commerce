@@ -2,9 +2,10 @@ import React, {useState,  useCallback} from 'react'
 import { View, Image } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage'
 import {useDispatch, useSelector} from 'react-redux'
-import {Button, Text} from 'native-base'
+import {Button, Text, Spinner} from 'native-base'
 import axios from '../../config/api'
 import { useFocusEffect } from '@react-navigation/native'
+import Loading from '../Loading/Loading'
 
 
 const Account = () => {
@@ -30,8 +31,9 @@ const Account = () => {
             .catch(err => console.log(err))
         }, [])
     )
+    console.log(image)
 
-    return (
+    return image ?  
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <Text style={{fontSize: 30, fontWeight: 'bold'}}>Account component</Text>
             {/* Tampilkan foto avatar */}
@@ -47,7 +49,8 @@ const Account = () => {
                 <Text>Sign Out</Text>
             </Button>
         </View>
-    )
+    :   
+        <Loading />
 }
 
 export default Account

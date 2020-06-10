@@ -1,0 +1,12 @@
+import React from 'react'
+import { View } from 'react-native'
+import {Spinner} from 'native-base'
+
+
+export default function Loading() {
+    return (
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Spinner color='purple' />
+        </View>
+    )
+}
