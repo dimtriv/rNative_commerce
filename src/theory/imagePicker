@@ -1,0 +1,12 @@
+IMAGE PICKER
+android/app/src/main/AndroidManifest.xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+AXIOS SEND IMAGE
+Tambahkan kode berikut pada 'block application' pada alamat file android/app/src/main/AndroidManifest.xml
+<application
+      ...
+      >> Copy paste kode ini <<
+      android:usesCleartextTraffic="true">
+Komentar kode dibawah ini pada alamat file /android/app/src/main/java/com/rnative_commerce/MainApplication.java
+// initializeFlipper(this, getReactNativeHost().getReactInstanceManager());

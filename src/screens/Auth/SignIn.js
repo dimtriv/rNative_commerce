@@ -18,8 +18,8 @@ const SignIn = ({navigation}) => {
         axios.post('/user/login', data)
         // res.data = {username, token}
         .then(res => {
-            const hasil = login(res.data)
-            dispatch(hasil)
+            const action = login(res.data)
+            dispatch(action)
         })
         .catch(err => {
             if(err.response.data.message){

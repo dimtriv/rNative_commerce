@@ -43,15 +43,7 @@ const MainRouter = () => {
                     // }}
                 }}
             />
-            <MainTab.Screen name="AccountTab" component={AccountTab} 
-                options ={{
-                    tabBarIcon: ({focused}) => {if(focused) {
-                        {return <Icon name="account-box" size={27} />}
-                    }else {
-                        return <Icon name = "account-box-outline" size = {27} />
-                    }}
-                }}
-            />
+
             <MainTab.Screen name="Add" component={Add} 
                 options ={{
                     tabBarIcon: ({focused}) =>  {if(focused) {
@@ -61,6 +53,17 @@ const MainRouter = () => {
                     }} 
                 }}
             />
+
+            <MainTab.Screen name="AccountTab" component={AccountTab} 
+                options ={{
+                    tabBarIcon: ({focused}) => {if(focused) {
+                        {return <Icon name="account-box" size={27} />}
+                    }else {
+                        return <Icon name = "account-box-outline" size = {27} />
+                    }}
+                }}
+            />
+        
         </MainTab.Navigator>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
+import AccountStack from './AccountStack'
 
 const Drawer = createDrawerNavigator()
 
@@ -10,7 +10,7 @@ import About from './About'
 export default function AccountTab() {
     return (
         <Drawer.Navigator drawerPosition="right" >
-            <Drawer.Screen name="Account" component={Account} />
+            <Drawer.Screen name="Account Screen" component={AccountStack} />            
             <Drawer.Screen name="About" component={About} />
         </Drawer.Navigator>
     )
