@@ -56,7 +56,7 @@ export default function EditAccount() {
             }
         });
     }
-    console.log(source)
+    // console.log(source)
 
     // menyimpan gambar ke database
     const onSaveImage = () => {

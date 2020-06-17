@@ -9,8 +9,8 @@ const MainTab = createBottomTabNavigator()
 
 // screens
 import AccountTab from '../screens/Account/AccountTab'
-import Feed from '../screens/Feed/Feed'
 import Add from '../screens/Add/Add'
+import FeedStack from '../screens/Feed/FeedStack'
 
 
 const MainRouter = () => {
@@ -19,7 +19,7 @@ const MainRouter = () => {
         // initialRouteName untuk menentukan halaman mana yang akan pertama kali dibuka
         <MainTab.Navigator tabBarOptions={{showLabel:false}} initialRouteName = "Feed">
             {/* urutan penulisan berpengaruh */}
-            <MainTab.Screen name="Feed" component={Feed} 
+            <MainTab.Screen name="FeedStack" component={FeedStack} 
             // Dapat mengganti icon tab menggunakan propery options
                 options ={{
                 // tanBarIcon menerima function yang harus me return sebuah component

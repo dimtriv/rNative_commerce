@@ -64,7 +64,7 @@ const Account = ({navigation}) => {
             </Card>
 
             <Card style={{marginTop: 20}} >
-            <ListItem icon onPress={() => Alert.alert("", "List")}>
+            <ListItem icon onPress={() => navigation.navigate('ListProduct')}>
                 <Left>
                     <Button style={{ backgroundColor: "#7bb9fc" }}>
                         <Icon size={23} name="view-list" />
@@ -74,17 +74,27 @@ const Account = ({navigation}) => {
                     <Text>Products</Text>
                 </Body>
             </ListItem>
-            <ListItem icon onPress={() => Alert.alert("", "List")}>
+            <ListItem icon onPress={() => Alert.alert("transaction")}>
                 <Left>
                     <Button style={{ backgroundColor: "#8af96b" }}>
-                        <Icon size={23} name="cart-outline" />
+                        <Icon size={23} name="swap-horizontal" />
                     </Button>
                 </Left>
                 <Body>
                     <Text>Transaction</Text>
                 </Body>
             </ListItem>
-            <ListItem icon onPress={() => Alert.alert("", "List")}>
+            <ListItem icon onPress={() => navigation.navigate("Cart")}>
+                <Left>
+                    <Button style={{ backgroundColor: "#8af96b" }}>
+                        <Icon size={23} name="cart-outline" />
+                    </Button>
+                </Left>
+                <Body>
+                    <Text>Cart</Text>
+                </Body>
+            </ListItem>
+            <ListItem icon onPress={onSignOut}>
                 <Left>
                     <Button style={{ backgroundColor: "#f96b6d" }}>
                         <Icon size={23} name="logout" />
@@ -108,3 +118,5 @@ export default Account
 // import { Image } from 'react-native'
 // useFocusEffect, useState
 // axios 
+
+// transaction akan dibuat table baru yaitu detail_transaction, karena pada saat mau melihat laporan maka bisa dilihat detailnya
