@@ -45,8 +45,8 @@ const SignUp = ({navigation}) => {
                 <Button block style={styles.signBtn} onPress={onSignUp}>
                     <Text style={ styles.signText}>Sign Up</Text>
                 </Button>
-                <TouchableOpacity onPress={() => navigation.navigate('SignUp')} >
-                    <Text style={styles.signUpText}>Don't have an account?</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('SignIn')} >
+                    <Text style={styles.signUpText}>already have an account?</Text>
                 </TouchableOpacity>
             </Content>
         </Container>

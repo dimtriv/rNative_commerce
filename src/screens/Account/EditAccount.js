@@ -42,7 +42,7 @@ export default function EditAccount() {
     // mengupload gambar dari camera atau galery
     const onChooseImage = () => {
         ImagePicker.showImagePicker(options, (response) => {
-            console.log({response});
+            // console.log({response});
         
             if (response.didCancel) {
                 console.log('User cancelled image picker');
